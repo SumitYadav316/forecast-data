@@ -1,3 +1,5 @@
+<img width="1660" height="946" alt="first_page" src="https://github.com/user-attachments/assets/61199c1a-c630-4283-bcab-92d9f9406182" />
+<img width="1667" height="994" alt="Screenshot from 2025-11-28 14-16-50" src="https://github.com/user-attachments/assets/e89fd3b6-e194-4d71-8488-a008a68b3a7a" />
 # README
 
 This README would normally document whatever steps are necessary to get the
