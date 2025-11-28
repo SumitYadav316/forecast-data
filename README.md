@@ -45,3 +45,5 @@ rails s
 ***********Open the app at browser **********:
 
 http://localhost:3000
+✅ Run all tests
+bundle exec rspec
