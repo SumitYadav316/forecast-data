@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* General Page Setup */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card Container */
+.container {
+  background: white;
+  width: 450px;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/************ NEW PAGE ************/
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.submit-wrap input[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-wrap input[type="submit"]:hover {
+  background: #009ffd;
+}
+
+.alert {
+  margin-top: 15px;
+  padding: 12px;
+  background: #ffe5e5;
+  color: #a10000;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/************ SHOW PAGE ************/
+
+.forecast-container {
+  width: 650px;
+}
+
+.info-box {
+  background: #f7f9fb;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  padding: 6px 10px;
+  display: inline-block;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cache {
+  background: #d4f5d0;
+  color: #147a00;
+}
+
+.fresh {
+  background: #d7e7ff;
+  color: #003e9c;
+}
+
+/* Current Weather Grid */
+.current-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.current-item {
+  background: #eef5ff;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.current-item span {
+  display: block;
+  font-size: 13px;
+  color: #555;
+}
+
+.current-item strong {
+  font-size: 18px;
+  color: #111;
+}
+
+/* Table */
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.forecast-table th,
+.forecast-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.forecast-table th {
+  background: #e8f1ff;
+  font-weight: 600;
+}
+
+.forecast-table tr:hover {
+  background: #f5faff;
+}
+
+/* Back Link */
+.back-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.back-link a {
+  color: #0077ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}

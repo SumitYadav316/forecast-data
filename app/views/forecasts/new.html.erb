@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Weather Lookup</h1>
+
+  <%= form_with url: forecasts_path, method: :post, local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :address, "Enter address or ZIP code" %>
+      <%= f.text_field :address, placeholder: "e.g. 10001 or Indore, MP" %>
+    </div>
+
+    <div class="submit-wrap">
+      <%= f.submit "Get Forecast" %>
+    </div>
+  <% end %>
+
+  <% if flash[:alert] %>
+    <p class="alert"><%= flash[:alert] %></p>
+  <% end %>
+</div>

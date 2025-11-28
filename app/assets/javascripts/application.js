@@ -1,0 +1,1 @@
+console.log("Sprockets application.js loaded");

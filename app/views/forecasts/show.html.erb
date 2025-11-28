@@ -1,0 +1,64 @@
+<div class="container forecast-container">
+
+  <h1>Forecast for <%= @forecast[:location_name] %></h1>
+
+  <div class="info-box">
+    <p><strong>Query:</strong> <%= @query %></p>
+    <p><strong>Timezone:</strong> <%= @forecast[:timezone] %></p>
+    <p><strong>Fetched at:</strong> <%= @fetched_at.utc.strftime("%Y-%m-%d %H:%M:%S UTC") %></p>
+
+    <% if @from_cache %>
+      <p class="tag cache">Cached Result</p>
+    <% else %>
+      <p class="tag fresh">Fresh Result</p>
+    <% end %>
+  </div>
+
+  <h2>Current Weather</h2>
+
+  <div class="current-box">
+    <div class="current-item">
+      <span>Temperature</span>
+      <strong><%= @forecast[:current][:temp] %> °C</strong>
+    </div>
+    <div class="current-item">
+      <span>Feels Like</span>
+      <strong><%= @forecast[:current][:feels_like] %> °C</strong>
+    </div>
+    <div class="current-item">
+      <span>Humidity</span>
+      <strong><%= @forecast[:current][:humidity] %> %</strong>
+    </div>
+    <div class="current-item">
+      <span>Conditions</span>
+      <strong><%= @forecast[:current][:weather] %></strong>
+    </div>
+  </div>
+
+  <h2>7-Day Forecast</h2>
+
+  <table class="forecast-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Low °C</th>
+        <th>High °C</th>
+        <th>Conditions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @forecast[:daily].each do |d| %>
+        <tr>
+          <td><%= d[:dt].strftime("%a, %b %d") %></td>
+          <td><%= d[:temp_min] %></td>
+          <td><%= d[:temp_max] %></td>
+          <td><%= d[:weather] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="back-link">
+    <%= link_to "New Lookup", root_path %>
+  </div>
+</div>
