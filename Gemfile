@@ -72,4 +72,4 @@ end
 gem "httparty"
 gem "geocoder"
 gem "dotenv-rails", groups: [:development, :test]
-gem "bootstrap", "~> 5.2.3"
+gem "bootstrap", "~> 5.3.5"
