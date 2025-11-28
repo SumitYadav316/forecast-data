@@ -21,13 +21,27 @@ Users can enter an address or ZIP code, and the app fetches real-time weather da
 - Rails 8.1.1
 - Bundler
 - PostgreSQL / SQLite (depending on your setup)
-
 ---
-
-## 📦 Setup Instructions
-
 ### 1️⃣ Clone the project
 
 ```bash
 git clone https://github.com/yourname/weather-app.git
 cd weather-app
+
+bundle install
+2️⃣ Setup the database
+rails db:create
+rails db:migrate
+3️⃣ Add Your API Key (IMPORTANT)
+  This project uses OpenWeatherMap API.
+  This project uses dotenv for environment variables.
+Step 1: Create a .env file in the project root
+  touch .env
+Step 2: Add your OpenWeather API key inside .env:
+  OPENWEATHER_API_KEY=your_api_key_here
+
+4️⃣ Start the browser
+rails s
+***********Open the app at browser **********:
+
+http://localhost:3000
