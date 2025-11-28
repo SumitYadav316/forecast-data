@@ -17,8 +17,8 @@ Users can enter an address or ZIP code, and the app fetches real-time weather da
 
 ## 🛠 Requirements
 
-- Ruby 3.2+
-- Rails 7+
+- Ruby 3.4.7
+- Rails 8.1.1
 - Bundler
 - PostgreSQL / SQLite (depending on your setup)
 
